@@ -78,4 +78,5 @@ AI interaction tips, with reusable examples and notes on what worked.
 
 For each tip, record when to use it, a copyable prompt or steps, and test results.
 
+<link rel="stylesheet" href="{{ '/assets/copy-prompt.css' | relative_url }}">
 <script defer src="{{ '/assets/copy-prompt.js' | relative_url }}" data-language="en"></script>
