@@ -77,3 +77,5 @@ lang: zh-CN
 ## 记录格式
 
 每条记下适用场景、可复制用法和实测结果。
+
+<script defer src="{{ '/assets/copy-prompt.js' | relative_url }}" data-language="zh-CN"></script>
