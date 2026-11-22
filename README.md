@@ -4,4 +4,4 @@
 
 **This is a bilingual repository in Chinese and English.** It collects practical AI interaction tips from Xiaohongshu on managing conversations, collaborating on projects, and refining AI responses.
 
-[中文版](docs/index.md) · [English version](docs/en.md)
+[中文版](https://tmpbook.github.io/ai-interaction-tips/) · [English version](https://tmpbook.github.io/ai-interaction-tips/en.html)
