@@ -1,19 +1,20 @@
 ---
 layout: default
-title: AI 交互技巧 / AI Interaction Tips
+title: AI 交互技巧
+lang: zh-CN
 ---
 
-# AI 交互技巧 / AI Interaction Tips
+**中文** · [English](en.md)
+
+# AI 交互技巧
 
 整理来自小红书的 AI 交互技巧，记录可复制的用法和实际效果。
 
-AI interaction tips from Xiaohongshu, with reusable examples and notes on what worked.
+- [对话管理](#context)
+- [项目协作](#workflow)
+- [输出调整](#output)
 
-- [对话管理 / Conversation Management](#context)
-- [项目协作 / Project Collaboration](#workflow)
-- [输出调整 / Refining Responses](#output)
-
-## 对话管理 / Conversation Management {#context}
+## 对话管理 {#context}
 
 ### 给长对话做小结，给新对话留交接
 
@@ -29,7 +30,7 @@ AI interaction tips from Xiaohongshu, with reusable examples and notes on what w
 - **Copyable prompt:** “Summarize the current task in HANDOFF.md. Include the goal, output requirements, progress, decisions and why we made them, what was verified, and what remains open. End with next steps in priority order.”
 - **Source:** Xiaohongshu’s Daily AI Tips for November 22, 2026, summarizing a tip shared by Jeremy Utley. Original link pending.
 
-## 项目协作 / Project Collaboration {#workflow}
+## 项目协作 {#workflow}
 
 ### 先定方案，再按功能分步交付
 
@@ -47,7 +48,7 @@ AI interaction tips from Xiaohongshu, with reusable examples and notes on what w
 - **Copyable prompt:** “Implement only this feature. First propose the simplest implementation and the acceptance criteria, then wait for my confirmation.”
 - **Source:** Xiaohongshu’s Daily AI Tips for November 22, 2026, featuring do同学’s post on four AI productivity tips. Original link pending. The headline’s 80% improvement claim is unverified.
 
-## 输出调整 / Refining Responses {#output}
+## 输出调整 {#output}
 
 ### 回答又长又绕时，先压缩到三句
 
@@ -71,8 +72,6 @@ AI interaction tips from Xiaohongshu, with reusable examples and notes on what w
 - **Copyable prompt:** “Ask me up to three questions that could change the outcome. Wait for my answers before proposing a solution.”
 - **Source:** Repository example. Testing pending.
 
-## 记录格式 / Entry Format
+## 记录格式
 
 每条记下适用场景、可复制用法、实测结果和来源。收录小红书笔记时，附上可核实的作者和原帖链接。
-
-For each tip, record when to use it, a copyable prompt or steps, test results, and the source. For Xiaohongshu tips, include a verifiable author and original post link when available.
