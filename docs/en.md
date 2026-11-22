@@ -77,3 +77,5 @@ AI interaction tips, with reusable examples and notes on what worked.
 ## Entry Format
 
 For each tip, record when to use it, a copyable prompt or steps, and test results.
+
+<script defer src="{{ '/assets/copy-prompt.js' | relative_url }}" data-language="en"></script>
