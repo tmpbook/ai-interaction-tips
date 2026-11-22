@@ -4,4 +4,4 @@
 
 **This is a bilingual repository in Chinese and English.** It collects practical AI interaction tips from Xiaohongshu on managing conversations, collaborating on projects, and refining AI responses.
 
-[浏览技巧 / Browse the tips](docs/index.md)
+[中文版](docs/index.md) · [English version](docs/en.md)
