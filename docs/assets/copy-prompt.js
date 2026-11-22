@@ -14,18 +14,31 @@
       .replace(/^(?:「(.*)」|“(.*)”)$/s, "$1$2");
     if (!prompt) continue;
 
+    line.closest("li").classList.add("prompt-copy-item");
+    line.classList.add("prompt-copy-card");
+
     const button = document.createElement("button");
     button.type = "button";
-    button.textContent = label;
+    button.className = "prompt-copy-button";
+    button.title = label;
+    button.setAttribute("aria-label", label);
+
+    const icon = document.createElement("span");
+    icon.className = "prompt-copy-icon";
+    icon.setAttribute("aria-hidden", "true");
+    button.append(icon);
 
     const status = document.createElement("span");
+    status.className = "prompt-copy-status";
     status.setAttribute("role", "status");
-    line.append(" ", button, " ", status);
+    line.append(button, status);
 
     button.addEventListener("click", async () => {
       status.textContent = "";
+      button.classList.remove("is-copied");
       try {
         await navigator.clipboard.writeText(prompt);
+        button.classList.add("is-copied");
         status.textContent = copied;
       } catch {
         status.textContent = failed;
