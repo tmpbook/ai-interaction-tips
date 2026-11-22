@@ -1,0 +1,76 @@
+.prompt-copy-item {
+  list-style: none;
+}
+
+.prompt-copy-card {
+  position: relative;
+  margin: 0.75rem 0;
+  padding: 0.85rem 3.6rem 0.85rem 1rem;
+  border: 1px solid color-mix(in srgb, currentColor 17%, transparent);
+  border-radius: 0.65rem;
+  background: color-mix(in srgb, currentColor 4%, transparent);
+  overflow-wrap: anywhere;
+}
+
+.prompt-copy-button {
+  position: absolute;
+  inset-block-start: 0.2rem;
+  inset-inline-end: 0.2rem;
+  display: grid;
+  place-items: center;
+  inline-size: 44px;
+  block-size: 44px;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0.45rem;
+  cursor: pointer;
+}
+
+.prompt-copy-button:hover {
+  background: color-mix(in srgb, currentColor 9%, transparent);
+}
+
+.prompt-copy-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
+
+.prompt-copy-icon {
+  position: relative;
+  inline-size: 10px;
+  block-size: 12px;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  box-sizing: border-box;
+  transform: translate(2px, 2px);
+}
+
+.prompt-copy-icon::before {
+  position: absolute;
+  inset: -5px 3px 3px -5px;
+  border: 1.5px solid currentColor;
+  border-inline-end: 0;
+  border-block-end: 0;
+  border-start-start-radius: 2px;
+  content: "";
+}
+
+.is-copied .prompt-copy-icon {
+  inline-size: 9px;
+  block-size: 15px;
+  border-width: 0 2px 2px 0;
+  border-radius: 0;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.is-copied .prompt-copy-icon::before {
+  content: none;
+}
+
+.prompt-copy-status:not(:empty) {
+  display: block;
+  margin-block-start: 0.35rem;
+  font-size: 0.875em;
+}
