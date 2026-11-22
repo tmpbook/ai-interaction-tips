@@ -11,9 +11,10 @@ When the user shares results from their Xiaohongshu task and asks for an update,
 ## Content Conventions
 
 - Keep the Chinese text in `docs/index.md` and the English text in `docs/en.md`. Keep the language switcher at the top of both pages.
-- Use the existing topics: Conversation Management (对话管理), Project Collaboration (项目协作), and Refining Responses (输出调整).
-- Place one difficulty label below each tip title. Use **Beginner** (新手入门) for simple prompts readers can try in one conversation. Use **Advanced** (高手进阶) for cross-conversation handoffs, work done in stages, or multi-step collaboration.
+- Use the existing topics: Conversation Management, Project Collaboration, and Refining Responses.
+- Place one difficulty label below each tip title. Use **Beginner** for simple prompts readers can try in one conversation. Use **Advanced** for cross-conversation handoffs, work done in stages, or multi-step collaboration.
 - Omit platform names, authors, original post links, and source fields from the published tips. Summarize the techniques in your own words and omit unverified efficiency figures.
+- Use the existing localized topic and difficulty labels on each page. Start each copyable prompt list item with the existing bold prompt label so the page can add a copy button automatically.
 - Keep the repository README bilingual and point its reading links to GitHub Pages. The default Chinese page is `https://tmpbook.github.io/ai-interaction-tips/` and the English page is `https://tmpbook.github.io/ai-interaction-tips/en.html`.
 
 For routine additions, update only the two language pages. After committing, verify the new entries and language switcher in both files. In your reply, summarize the tips you added or merged.
