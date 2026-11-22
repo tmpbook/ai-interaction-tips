@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: tips
 title: AI 交互技巧
 lang: zh-CN
 ---
@@ -8,7 +8,7 @@ lang: zh-CN
 
 # AI 交互技巧
 
-整理AI 交互技巧，记录可复制的用法和实际效果。
+整理 AI 交互技巧，记录可复制的用法和实际效果。
 
 - [对话管理](#context)
 - [项目协作](#workflow)
@@ -77,6 +77,3 @@ lang: zh-CN
 ## 记录格式
 
 每条记下适用场景、可复制用法和实测结果。
-
-<link rel="stylesheet" href="{{ '/assets/copy-prompt.css' | relative_url }}">
-<script defer src="{{ '/assets/copy-prompt.js' | relative_url }}" data-language="zh-CN"></script>
