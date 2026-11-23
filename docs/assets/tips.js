@@ -3,7 +3,7 @@
   const chinese = document.documentElement.lang === "zh-CN";
   const labels = chinese ? {
     topic: "主题", level: "难度", allTopics: "全部主题", allLevels: "全部难度",
-    beginner: "新手入门", advanced: "高手进阶", details: "查看用法",
+    beginner: "入门", advanced: "进阶", details: "查看用法",
     prompt: "可复制用法", copy: "复制提示词", copied: "已复制",
     failed: "复制失败，请选中提示词手动复制。",
     empty: "没有符合条件的技巧。试试调整筛选。",
@@ -112,7 +112,7 @@
   }
 
   const levels = { beginner: labels.beginner, advanced: labels.advanced };
-  const keys = ["context", "workflow", "output"];
+  const keys = ["requirements", "context", "output", "workflow", "evaluation"];
   const headings = Array.from(library.querySelectorAll(":scope > h2")).filter(heading => keys.includes(heading.id));
   if (headings.length !== keys.length) return;
   const topics = headings.map(buildTopic);
