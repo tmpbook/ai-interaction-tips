@@ -4,6 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | escape }}</title>
+  <script>
+(() => {
+  let preference = "system";
+  try { const saved = localStorage.getItem("tips-theme"); if (["light", "dark"].includes(saved)) preference = saved; } catch {}
+  const system = window.matchMedia("(prefers-color-scheme: dark)");
+  function apply() { document.documentElement.dataset.theme = preference === "system" ? (system.matches ? "dark" : "light") : preference; }
+  window.tipsTheme = { get: () => preference, set: value => {
+    preference = ["light", "dark"].includes(value) ? value : "system";
+    try { if (preference === "system") localStorage.removeItem("tips-theme"); else localStorage.setItem("tips-theme", preference); } catch {}
+    apply();
+  }};
+  system.addEventListener?.("change", apply);
+  apply();
+})();
+  </script>
   <link rel="stylesheet" href="{{ '/assets/tips.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <script defer src="{{ '/assets/tips.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </head>
