@@ -10,46 +10,13 @@ lang: en
 
 AI interaction tips, with reusable examples and notes on what worked.
 
-- [Conversation Management](#context)
-- [Project Collaboration](#workflow)
-- [Refining Responses](#output)
+- [Requirements & Questions](#requirements)
+- [Context & Materials](#context)
+- [Writing & Verification](#output)
+- [Tasks & Collaboration](#workflow)
+- [Evaluation & Reuse](#evaluation)
 
-## Conversation Management {#context}
-
-### Summarize long conversations and prepare a handoff for the next chat
-
-**Advanced**
-
-- Start a new chat for unrelated tasks. When a chat runs long, ask the AI to summarize what has been decided, what remains open, and what comes next.
-- Bring only the context, conclusions, and action items relevant to the next step into the new chat. Review the summary before moving on and restore any missing constraints or open issues.
-- To continue the same task in a new chat, save a local `HANDOFF.md` and include it in the new conversation. Capture the necessary context and output format, the goal, progress, decisions and their rationale, pitfalls, what was verified, open issues, and the order of next steps.
-- For ongoing projects, index the background, current deliverables, and file locations with update dates. Reference only relevant material during handoff. Store reusable preferences separately from temporary status and update stale information.
-- **Copyable prompt:** “Summarize the current task in HANDOFF.md. Include the goal, output requirements, progress, decisions and why we made them, what was verified, and what remains open. End with next steps in priority order.”
-
-### Choose reasoning effort for the task
-
-**Beginner**
-
-- Use this when your tool offers reasoning settings and you want to manage latency and usage. Try a lower setting for simple edits and corrections, and increase it for complex reasoning. Compare accuracy, time, and usage on tasks that represent your own work.
-- Change the setting in the tool and decide what to keep from the results. Test the effect of each setting.
-- **Copyable prompt:** “Design three test tasks with clear acceptance criteria for my usual [task type], so I can compare reasoning settings. Specify what to check for each task and where to record elapsed time and usage.”
-
-### Map a long document before reading selected sections
-
-**Beginner**
-
-- Use this for long reports, proposals, or manuals. State your reading goal, ask the AI to map the document and identify relevant sections, then choose passages to examine.
-- Distinguish the original table of contents from an inferred outline. Request section or paragraph references and flag information absent from the document.
-- **Copyable prompt:** “My goal in reading this document is [goal]. First list its table of contents or structure, marking any outline you inferred, and identify the most relevant sections. Wait for me to choose, then explain those passages with references to their location. Do not fill gaps with unsupported information.”
-
-### Speak rough ideas first, then organize them
-
-**Beginner**
-
-- Use this when you struggle to start typing. If voice input is available, say the background, ideas, and concerns aloud, including corrections, then ask the AI to organize a task brief.
-- Check names, numbers, and negations in the transcript before submitting. Review screenshots or app attachments too, sharing only what the task needs.
-- Paste exact numbers and error messages separately. When correcting yourself, identify the statement to replace. For action planning, request up to five tasks and list uncertainties separately.
-- **Copyable prompt:** “Organize these rough spoken notes into goals, known facts, constraints, and questions to resolve. Preserve uncertainty and list contradictions separately without making decisions for me. Notes: [paste transcript].”
+## Requirements & Questions {#requirements}
 
 ### Provide background, goals, constraints, and acceptance criteria
 
@@ -61,15 +28,14 @@ AI interaction tips, with reusable examples and notes on what worked.
 - Translate words such as “professional” or “concise” into checkable requirements, such as leading with a conclusion and staying within a word limit. Provide negative examples with a desired correction. For exploratory work, constrain the goal and essential boundaries, then refine through feedback instead of fixing every step upfront.
 - **Copyable prompt:** “Background: [why this arose]. Goal: [intended outcome]. Constraints: [time, budget, boundaries]. Acceptance criteria: [checkable conditions]. Materials and examples: [content]. Check for missing information that could affect the result, distinguish facts from assumptions, then complete [task] in [format].”
 
-### Compare models on real tasks and assign work by risk and cost
+### Ask the AI to clarify an underspecified request
 
 **Beginner**
 
-- Use this when choosing among models or tools. Compare accuracy, response time, and cost on your own document reading, reasoning, and routine processing tasks, then choose a primary and a backup. Context capacity is only one factor in document tasks.
-- Add independent verification when failure would be costly. After repeated failures, check whether information, tools, or capability are missing before switching. Periodically remove redundant or rarely used tools.
-- **Copyable prompt:** “Design three representative tests and acceptance criteria for [task], recording accuracy, time, and cost. Based on the consequences of failure, specify which results require human or tool verification and when to add information, use a tool, or switch models.”
-
-## Project Collaboration {#workflow}
+- Use this for proposals, copy, or other tasks with unclear goals or several constraints. Restate the request, ask consequential questions one at a time, then confirm the goal and constraints. Simple tasks can proceed directly.
+- Start with up to three key questions, allowing up to five when needed. Offer choices and an “Other” option where helpful; stop when there is enough information.
+- Order questions by decision dependencies, starting with choices that affect later ones. Verify facts from supplied material or authorized tools first. Options may include a recommendation and rationale, while allowing disagreement and leaving the decision to you.
+- **Copyable prompt:** “Before drafting, restate your understanding of the task in up to three sentences. Ask up to three questions that most affect the result, one at a time, without repeating questions already answered. Then summarize the goal, constraints, and deliverable requirements, and wait for my confirmation before drafting.”
 
 ### Define the intended outcome before choosing a deliverable
 
@@ -81,76 +47,36 @@ AI interaction tips, with reusable examples and notes on what worked.
 - Before automating, identify the user's friction at a specific step and establish a baseline from existing data; leave unknown numbers unspecified. Compare the costs of simple rules, workflows, and model-based options. Define success criteria, failure signals, and a fallback. Test ambitious targets for feasibility before treating them as commitments.
 - **Copyable prompt:** “I need [deliverable] for [audience] to help them [understand or act]. First help me define checkable success criteria, examine the available original material and gaps, then suggest relevant professional methods and any missing steps that affect the outcome. Explain the purpose and cost of each step and the evidence or tests that can independently verify the result, and wait for me to confirm the scope before executing.”
 
-### Agree on a plan, then deliver one feature at a time
+## Context & Materials {#context}
+
+### Speak rough ideas first, then organize them
+
+**Beginner**
+
+- Use this when you struggle to start typing. If voice input is available, say the background, ideas, and concerns aloud, including corrections, then ask the AI to organize a task brief.
+- Check names, numbers, and negations in the transcript before submitting. Review screenshots or app attachments too, sharing only what the task needs.
+- Paste exact numbers and error messages separately. When correcting yourself, identify the statement to replace. For action planning, request up to five tasks and list uncertainties separately.
+- **Copyable prompt:** “Organize these rough spoken notes into goals, known facts, constraints, and questions to resolve. Preserve uncertainty and list contradictions separately without making decisions for me. Notes: [paste transcript].”
+
+### Map a long document before reading selected sections
+
+**Beginner**
+
+- Use this for long reports, proposals, or manuals. State your reading goal, ask the AI to map the document and identify relevant sections, then choose passages to examine.
+- Distinguish the original table of contents from an inferred outline. Request section or paragraph references and flag information absent from the document.
+- **Copyable prompt:** “My goal in reading this document is [goal]. First list its table of contents or structure, marking any outline you inferred, and identify the most relevant sections. Wait for me to choose, then explain those passages with references to their location. Do not fill gaps with unsupported information.”
+
+### Summarize long conversations and prepare a handoff for the next chat
 
 **Advanced**
 
-- Break work into steps with facts, constraints, examples, and acceptance criteria for each. Check facts and data before reasoning and goal completion. Save verified workflows and prompts as templates with their conditions of use.
-- Choose a model appropriate to the complexity to discuss the plan. For a complex project, sketch the architecture and agree on it before handing implementation to an agent.
-- Give each feature its own conversation in a large project. Check the result before moving on.
-- Specify the simplest implementation for small tasks. For UI work, provide a reference image, describe the intended result, and define checkable acceptance criteria.
-- Mark dependencies and priorities, completing prerequisites first. For writing, separate direction and structure, research, and drafting. Complete one concrete deliverable before adding tools. Before batch processing, deduplicate and filter with explicit rules, checking a sample for relevant material that was excluded.
-- **Copyable prompt:** “Implement only this feature. First propose the simplest implementation and the acceptance criteria, then wait for my confirmation.”
+- Start a new chat for unrelated tasks. When a chat runs long, ask the AI to summarize what has been decided, what remains open, and what comes next.
+- Bring only the context, conclusions, and action items relevant to the next step into the new chat. Review the summary before moving on and restore any missing constraints or open issues.
+- To continue the same task in a new chat, save a local `HANDOFF.md` and include it in the new conversation. Capture the necessary context and output format, the goal, progress, decisions and their rationale, pitfalls, what was verified, open issues, and the order of next steps.
+- For ongoing projects, index the background, current deliverables, and file locations with update dates. Reference only relevant material during handoff. Store reusable preferences separately from temporary status and update stale information.
+- **Copyable prompt:** “Summarize the current task in HANDOFF.md. Include the goal, output requirements, progress, decisions and why we made them, what was verified, and what remains open. End with next steps in priority order.”
 
-### Preserve uncertainty when drafting meeting minutes
-
-**Advanced**
-
-- Use this when extracting decisions and action items from a transcript. Separate confirmed decisions, suggestions under discussion, and open issues.
-- For quick follow-up, put action items in three columns: owner, confirmed action, and timing. Preserve relevant conditions and open issues.
-- List only actions confirmed in the meeting. Mark unconfirmed owners or dates as pending confirmation, and preserve qualifiers such as “aim for” and “expected.”
-- **Copyable prompt:** “Organize the minutes into confirmed decisions, suggestions under discussion, and open issues. List only confirmed action items and mark missing owners or dates as pending confirmation. Check each item against the transcript for suggestions recorded as decisions or target dates recorded as commitments. List follow-up questions separately.”
-
-### Ask the AI to keep going within the authorized scope
-
-**Advanced**
-
-- Use this for tasks with a clear goal and several steps. For low-risk, reversible details, state a reasonable assumption and proceed. Ask first about decisions that change the goal or scope or have irreversible consequences.
-- **Copyable prompt:** “Once the goal and deliverables are clear, carry out the authorized steps through delivery. State your assumptions and proceed on small, reversible details. Ask me first about decisions that change the scope, require authorization, or are irreversible.”
-
-### Clarify learning needs before teaching and practice
-
-**Advanced**
-
-- Use this to learn a new field or fill gaps in your foundations. Start with several rounds of questions about your goal, existing knowledge, scope, and available time. Turn the answers into a learning brief and confirm it before starting.
-- Teach one concept and give one exercise per round. Wait for the learner's answer before correcting misunderstandings. End each stage with a case that checks application, then adjust what comes next.
-- For presentation or negotiation practice, use realistic scenarios. After each answer, apply agreed criteria, quote specific issues, and repeat the same scenario to compare changes. Treat scores as practice feedback, not proof of competence.
-- **Copyable prompt:** “I want to learn [topic]. Ask me questions over several rounds to clarify my goal, existing knowledge, scope, and schedule. Summarize a learning brief for my confirmation. Then teach one concept and give one exercise per round, waiting for my answer before feedback. End each stage with a case to check understanding and adjust the next stage.”
-
-### Evaluate failure cases before revising a prompt
-
-**Advanced**
-
-- Use this when a prompt keeps growing while similar errors recur. Collect representative successes and failures, define passing criteria, and distinguish missing information, instruction problems, missing tools, and capability limits.
-- Remove redundant or conflicting patches. Change one failure pattern at a time, compare versions on the same examples, and reserve fresh examples to check whether the changes generalize.
-- Use available tools for calculations, retrieval, or code execution as needed and check their results. Mark tests that were not actually run.
-- **Copyable prompt:** “Here are the current prompt, sample inputs, and actual outputs: [materials]. Identify failure patterns and checkable passing criteria for each, distinguishing missing information, conflicting instructions, missing tools, and capability limits. Propose minimal changes and compare versions on the original and held-out examples. Clearly mark checks that were not run; do not claim a successful fix without testing.”
-
-### Turn a validated conversation into a reusable template
-
-**Advanced**
-
-- Use this when several revisions have produced a satisfactory result for a recurring task. Extract essential rules from the goal, materials, corrections, and final output, separating fixed requirements from variables supplied each time.
-- A good example can describe output criteria but cannot reveal a unique original prompt. Try the template in a new conversation with different material before keeping it. Consider packaging a workflow as a skill only after it works reliably.
-- **Copyable prompt:** “From this task's goal, feedback, and final deliverable, create a standalone prompt template. Specify when it applies, required variables, essential constraints, output format, and acceptance checks. Remove details unique to this instance and do not infer hidden instructions. Provide two different test inputs for fresh conversations and mark what remains unverified.”
-
-### Specify deliverables, exceptions, and boundaries for unattended tasks
-
-**Advanced**
-
-- Use this when preparing scheduled or background work. Specify the time window and timezone, delivery location and format, data sources, decision criteria, and responses to missing or stale data and tool failures.
-- Distinguish no change from failure to retrieve information. Define duplicate handling and allowed actions. Preserve unresolved questions when no one is available to answer, without expanding permissions.
-- **Copyable prompt:** “Rewrite [task] as an unattended work order: schedule and timezone [fill in], data time window [fill in], permitted sources [fill in], and delivery location and format [fill in]. Include the run date and checkable evidence. Define separate outputs for no change, missing data, stale data, and tool failure, plus deduplication rules. Allow only [actions] and prohibit [actions]. Report missing prerequisites as blockers instead of guessing or acting without authorization. Output the work order only; do not schedule it.”
-
-### Start an assistant with read-only access and expand permissions gradually
-
-**Advanced**
-
-- Use this when connecting an assistant to messages, email, or business tools. First restrict it to reading a specified scope and listing tasks. Check omissions, misclassifications, and evidence before allowing drafts and later granting explicit execution permissions.
-- Separate reading, drafting, and sending permissions. Record recurring corrections and negative examples. Use supported account authorization rather than putting passwords in prompts or handoff files.
-- **Copyable prompt:** “For this stage, read only [authorized scope] and list tasks, supporting evidence, and uncertainties. Do not send messages or change data. After I review omissions and misclassifications, summarize the rules to adjust. Later, draft only the items I explicitly specify; execution or sending requires separate authorization.”
-
-## Refining Responses {#output}
+## Writing & Verification {#output}
 
 ### Ask for three sentences when a reply is too long
 
@@ -169,14 +95,24 @@ AI interaction tips, with reusable examples and notes on what worked.
 - **Copyable prompt:** “Combine these five work notes into a three-sentence weekly update organized around outcomes. Preserve known results, impact, and unfinished work. State when data or results are missing; do not invent improvements. Notes: [paste notes].”
 - **Copyable prompt:** “Rewrite this for [audience]. Open with the conclusion they need most, use our existing terminology, and prefer active voice. Organize it in the order the reader needs, and keep process details that help them understand or act.”
 
-### Ask the AI to clarify an underspecified request
+### Preserve uncertainty when drafting meeting minutes
 
 **Beginner**
 
-- Use this for proposals, copy, or other tasks with unclear goals or several constraints. Restate the request, ask consequential questions one at a time, then confirm the goal and constraints. Simple tasks can proceed directly.
-- Start with up to three key questions, allowing up to five when needed. Offer choices and an “Other” option where helpful; stop when there is enough information.
-- Order questions by decision dependencies, starting with choices that affect later ones. Verify facts from supplied material or authorized tools first. Options may include a recommendation and rationale, while allowing disagreement and leaving the decision to you.
-- **Copyable prompt:** “Before drafting, restate your understanding of the task in up to three sentences. Ask up to three questions that most affect the result, one at a time, without repeating questions already answered. Then summarize the goal, constraints, and deliverable requirements, and wait for my confirmation before drafting.”
+- Use this when extracting decisions and action items from a transcript. Separate confirmed decisions, suggestions under discussion, and open issues.
+- For quick follow-up, put action items in three columns: owner, confirmed action, and timing. Preserve relevant conditions and open issues.
+- List only actions confirmed in the meeting. Mark unconfirmed owners or dates as pending confirmation, and preserve qualifiers such as “aim for” and “expected.”
+- **Copyable prompt:** “Organize the minutes into confirmed decisions, suggestions under discussion, and open issues. List only confirmed action items and mark missing owners or dates as pending confirmation. Check each item against the transcript for suggestions recorded as decisions or target dates recorded as commitments. List follow-up questions separately.”
+
+### Make factual claims traceable to the provided material
+
+**Beginner**
+
+- Use this for summaries, literature notes, and product copy. Limit the permitted material, attach locations or excerpts to factual claims, distinguish facts, inferences, and unverified points, then check each claim.
+- State error-prone boundaries explicitly, such as marking features not confirmed as released as unreleased or unconfirmed. An unimplemented feature is not automatically available for customization.
+- These constraints support verification but do not guarantee correctness. For long drafts, confirm an outline first.
+- Prioritize checking amounts, dates, percentages, names, and places. For images requiring exact wording, create the background and editable text separately, then compare the final result with the approved copy.
+- **Copyable prompt:** “Answer only from the material I provide. For every factual claim, cite the material name and section, page, or relevant excerpt. Mark unsupported points as unverified. Separate facts from inferences and do not invent references. Preserve the unconfirmed status of features, dates, and outcomes. Provide an outline for confirmation before drafting, then list items to verify. Material: [content].”
 
 ### Check assumptions before discussing solutions
 
@@ -189,16 +125,6 @@ AI interaction tips, with reusable examples and notes on what worked.
 - **Copyable prompt:** “My plan is [plan]. Identify up to five of the strongest objections, distinguishing established facts, inferences, and assumptions to test. Do not invent evidence to fill the list. Choose the objection I am most likely to overlook that could change my decision, and design a low-cost test for this week. Specify the steps, observable measures, and results that would warrant changing the plan.”
 - **Copyable prompt:** “Examine my judgment first and identify up to three concerns with specific reasons. Quote the relevant part of my statement and explain the evidence and conditions to test. Say so if you find no concerns. Wait for me to choose one and provide my reasoning, then reassess. Finally, place the original and revised conclusions side by side, identifying changes, reasons, and remaining uncertainties.”
 
-### Make factual claims traceable to the provided material
-
-**Beginner**
-
-- Use this for summaries, literature notes, and product copy. Limit the permitted material, attach locations or excerpts to factual claims, distinguish facts, inferences, and unverified points, then check each claim.
-- State error-prone boundaries explicitly, such as marking features not confirmed as released as unreleased or unconfirmed. An unimplemented feature is not automatically available for customization.
-- These constraints support verification but do not guarantee correctness. For long drafts, confirm an outline first.
-- Prioritize checking amounts, dates, percentages, names, and places. For images requiring exact wording, create the background and editable text separately, then compare the final result with the approved copy.
-- **Copyable prompt:** “Answer only from the material I provide. For every factual claim, cite the material name and section, page, or relevant excerpt. Mark unsupported points as unverified. Separate facts from inferences and do not invent references. Preserve the unconfirmed status of features, dates, and outcomes. Provide an outline for confirmation before drafting, then list items to verify. Material: [content].”
-
 ### Derive writing style and judgment rules from your own work
 
 **Advanced**
@@ -207,6 +133,86 @@ AI interaction tips, with reusable examples and notes on what worked.
 - Capture judgment rules separately through questions about real choices. Record trade-offs and evidence requirements without treating one decision as a permanent belief.
 - Save reviewed rules in project instructions where supported, or attach relevant portions to each task. Review and update them; one conversation does not make them permanently active.
 - **Copyable prompt:** “From my writing and editing examples, extract expression habits, phrases to avoid, and alternatives, with an excerpt supporting each observation. Mark uncertain observations for confirmation. Then ask one question at a time about my real choices to capture judgment rules and their conditions of use. Wait for my review before saving writing rules and applying them to new drafts. Material: [content].”
+
+## Tasks & Collaboration {#workflow}
+
+### Agree on a plan, then deliver one feature at a time
+
+**Advanced**
+
+- Break work into steps with facts, constraints, examples, and acceptance criteria for each. Check facts and data before reasoning and goal completion. Save verified workflows and prompts as templates with their conditions of use.
+- Choose a model appropriate to the complexity to discuss the plan. For a complex project, sketch the architecture and agree on it before handing implementation to an agent.
+- Give each feature its own conversation in a large project. Check the result before moving on.
+- Specify the simplest implementation for small tasks. For UI work, provide a reference image, describe the intended result, and define checkable acceptance criteria.
+- Mark dependencies and priorities, completing prerequisites first. For writing, separate direction and structure, research, and drafting. Complete one concrete deliverable before adding tools. Before batch processing, deduplicate and filter with explicit rules, checking a sample for relevant material that was excluded.
+- **Copyable prompt:** “Implement only this feature. First propose the simplest implementation and the acceptance criteria, then wait for my confirmation.”
+
+### Ask the AI to keep going within the authorized scope
+
+**Advanced**
+
+- Use this for tasks with a clear goal and several steps. For low-risk, reversible details, state a reasonable assumption and proceed. Ask first about decisions that change the goal or scope or have irreversible consequences.
+- **Copyable prompt:** “Once the goal and deliverables are clear, carry out the authorized steps through delivery. State your assumptions and proceed on small, reversible details. Ask me first about decisions that change the scope, require authorization, or are irreversible.”
+
+### Clarify learning needs before teaching and practice
+
+**Advanced**
+
+- Use this to learn a new field or fill gaps in your foundations. Start with several rounds of questions about your goal, existing knowledge, scope, and available time. Turn the answers into a learning brief and confirm it before starting.
+- Teach one concept and give one exercise per round. Wait for the learner's answer before correcting misunderstandings. End each stage with a case that checks application, then adjust what comes next.
+- For presentation or negotiation practice, use realistic scenarios. After each answer, apply agreed criteria, quote specific issues, and repeat the same scenario to compare changes. Treat scores as practice feedback, not proof of competence.
+- **Copyable prompt:** “I want to learn [topic]. Ask me questions over several rounds to clarify my goal, existing knowledge, scope, and schedule. Summarize a learning brief for my confirmation. Then teach one concept and give one exercise per round, waiting for my answer before feedback. End each stage with a case to check understanding and adjust the next stage.”
+
+### Specify deliverables, exceptions, and boundaries for unattended tasks
+
+**Advanced**
+
+- Use this when preparing scheduled or background work. Specify the time window and timezone, delivery location and format, data sources, decision criteria, and responses to missing or stale data and tool failures.
+- Distinguish no change from failure to retrieve information. Define duplicate handling and allowed actions. Preserve unresolved questions when no one is available to answer, without expanding permissions.
+- **Copyable prompt:** “Rewrite [task] as an unattended work order: schedule and timezone [fill in], data time window [fill in], permitted sources [fill in], and delivery location and format [fill in]. Include the run date and checkable evidence. Define separate outputs for no change, missing data, stale data, and tool failure, plus deduplication rules. Allow only [actions] and prohibit [actions]. Report missing prerequisites as blockers instead of guessing or acting without authorization. Output the work order only; do not schedule it.”
+
+### Start an assistant with read-only access and expand permissions gradually
+
+**Advanced**
+
+- Use this when connecting an assistant to messages, email, or business tools. First restrict it to reading a specified scope and listing tasks. Check omissions, misclassifications, and evidence before allowing drafts and later granting explicit execution permissions.
+- Separate reading, drafting, and sending permissions. Record recurring corrections and negative examples. Use supported account authorization rather than putting passwords in prompts or handoff files.
+- **Copyable prompt:** “For this stage, read only [authorized scope] and list tasks, supporting evidence, and uncertainties. Do not send messages or change data. After I review omissions and misclassifications, summarize the rules to adjust. Later, draft only the items I explicitly specify; execution or sending requires separate authorization.”
+
+## Evaluation & Reuse {#evaluation}
+
+### Choose reasoning effort for the task
+
+**Advanced**
+
+- Use this when your tool offers reasoning settings and you want to manage latency and usage. Try a lower setting for simple edits and corrections, and increase it for complex reasoning. Compare accuracy, time, and usage on tasks that represent your own work.
+- Change the setting in the tool and decide what to keep from the results. Test the effect of each setting.
+- **Copyable prompt:** “Design three test tasks with clear acceptance criteria for my usual [task type], so I can compare reasoning settings. Specify what to check for each task and where to record elapsed time and usage.”
+
+### Compare models on real tasks and assign work by risk and cost
+
+**Advanced**
+
+- Use this when choosing among models or tools. Compare accuracy, response time, and cost on your own document reading, reasoning, and routine processing tasks, then choose a primary and a backup. Context capacity is only one factor in document tasks.
+- Add independent verification when failure would be costly. After repeated failures, check whether information, tools, or capability are missing before switching. Periodically remove redundant or rarely used tools.
+- **Copyable prompt:** “Design three representative tests and acceptance criteria for [task], recording accuracy, time, and cost. Based on the consequences of failure, specify which results require human or tool verification and when to add information, use a tool, or switch models.”
+
+### Evaluate failure cases before revising a prompt
+
+**Advanced**
+
+- Use this when a prompt keeps growing while similar errors recur. Collect representative successes and failures, define passing criteria, and distinguish missing information, instruction problems, missing tools, and capability limits.
+- Remove redundant or conflicting patches. Change one failure pattern at a time, compare versions on the same examples, and reserve fresh examples to check whether the changes generalize.
+- Use available tools for calculations, retrieval, or code execution as needed and check their results. Mark tests that were not actually run.
+- **Copyable prompt:** “Here are the current prompt, sample inputs, and actual outputs: [materials]. Identify failure patterns and checkable passing criteria for each, distinguishing missing information, conflicting instructions, missing tools, and capability limits. Propose minimal changes and compare versions on the original and held-out examples. Clearly mark checks that were not run; do not claim a successful fix without testing.”
+
+### Turn a validated conversation into a reusable template
+
+**Advanced**
+
+- Use this when several revisions have produced a satisfactory result for a recurring task. Extract essential rules from the goal, materials, corrections, and final output, separating fixed requirements from variables supplied each time.
+- A good example can describe output criteria but cannot reveal a unique original prompt. Try the template in a new conversation with different material before keeping it. Consider packaging a workflow as a skill only after it works reliably.
+- **Copyable prompt:** “From this task's goal, feedback, and final deliverable, create a standalone prompt template. Specify when it applies, required variables, essential constraints, output format, and acceptance checks. Remove details unique to this instance and do not infer hidden instructions. Provide two different test inputs for fresh conversations and mark what remains unverified.”
 
 ## Entry Format
 
