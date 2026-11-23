@@ -34,3 +34,9 @@ When the user pastes daily AI-tip digests, curate and merge useful material into
 - For changes to topic IDs, difficulty labels, or rendering, check the filters and card counts on both languages using rendered HTML. Test relevant filter combinations and copy behavior when affected. Distinguish DOM tests from real browser checks.
 - After committing, read back changed files. Claim live deployment or visual verification only when actually observed; otherwise state the relevant limitation briefly.
 - Summarize substantive additions, merges, removals, or interface changes concisely and link to GitHub Pages.
+
+## Visual Design
+
+- Keep typography compact and readable, with a warm neutral light palette and charcoal dark palette accented by indigo.
+- Preserve the localized System / Light / Dark selector, system-default behavior, and saved preference across both languages. Apply the theme before rendering to avoid a light flash.
+- Use theme color variables for controls, text, borders, and interaction states. Check both themes when changing styles.
