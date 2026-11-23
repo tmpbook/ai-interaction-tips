@@ -21,8 +21,17 @@ AI interaction tips, with reusable examples and notes on what worked.
 **Advanced**
 
 - Start a new chat for unrelated tasks. When a chat runs long, ask the AI to summarize what has been decided, what remains open, and what comes next.
+- Bring only the context, conclusions, and action items relevant to the next step into the new chat. Review the summary before moving on and restore any missing constraints or open issues.
 - To continue the same task in a new chat, save a local `HANDOFF.md` and include it in the new conversation. Capture the necessary context and output format, the goal, progress, decisions and their rationale, pitfalls, what was verified, open issues, and the order of next steps.
 - **Copyable prompt:** “Summarize the current task in HANDOFF.md. Include the goal, output requirements, progress, decisions and why we made them, what was verified, and what remains open. End with next steps in priority order.”
+
+### Choose reasoning effort for the task
+
+**Beginner**
+
+- Use this when your tool offers reasoning settings and you want to manage latency and usage. Try a lower setting for simple edits and corrections, and increase it for complex reasoning. Compare accuracy, time, and usage on tasks that represent your own work.
+- Change the setting in the tool and decide what to keep from the results. Test the effect of each setting.
+- **Copyable prompt:** “Design three test tasks with clear acceptance criteria for my usual [task type], so I can compare reasoning settings. Specify what to check for each task and where to record elapsed time and usage.”
 
 ## Project Collaboration {#workflow}
 
@@ -50,6 +59,14 @@ AI interaction tips, with reusable examples and notes on what worked.
 - Use this for tasks with a clear goal and several steps. For low-risk, reversible details, state a reasonable assumption and proceed. Ask first about decisions that change the goal or scope or have irreversible consequences.
 - **Copyable prompt:** “Once the goal and deliverables are clear, carry out the authorized steps through delivery. State your assumptions and proceed on small, reversible details. Ask me first about decisions that change the scope, require authorization, or are irreversible.”
 
+### Clarify learning needs before teaching and practice
+
+**Advanced**
+
+- Use this to learn a new field or fill gaps in your foundations. Start with several rounds of questions about your goal, existing knowledge, scope, and available time. Turn the answers into a learning brief and confirm it before starting.
+- Teach one concept and give one exercise per round. Wait for the learner's answer before correcting misunderstandings. End each stage with a case that checks application, then adjust what comes next.
+- **Copyable prompt:** “I want to learn [topic]. Ask me questions over several rounds to clarify my goal, existing knowledge, scope, and schedule. Summarize a learning brief for my confirmation. Then teach one concept and give one exercise per round, waiting for my answer before feedback. End each stage with a case to check understanding and adjust the next stage.”
+
 ## Refining Responses {#output}
 
 ### Ask for three sentences when a reply is too long
@@ -73,6 +90,14 @@ AI interaction tips, with reusable examples and notes on what worked.
 - **Copyable prompt:** “Ask me up to three questions that could change the outcome. Wait for my answers before proposing a solution.”
 - If open-ended questions are hard to answer, ask the AI to offer a few choices and an “Other” option. For example: “Use multiple-choice questions where the options are clear, and let me add my own context.”
 - **Testing:** Pending.
+
+### Check assumptions before discussing solutions
+
+**Advanced**
+
+- Use this to examine a judgment or proposal. Ask for up to three specific, checkable concerns, choose one to address with your reasoning or a counterexample, and compare the original and revised conclusions.
+- Each concern should connect to your actual words and identify supporting evidence or a condition to test. Verify the grounds for the conclusion and pause the debate when objections are generic or their evidence cannot be checked.
+- **Copyable prompt:** “Examine my judgment first and identify up to three concerns with specific reasons. Quote the relevant part of my statement and explain the evidence and conditions to test. Say so if you find no concerns. Wait for me to choose one and provide my reasoning, then reassess. Finally, place the original and revised conclusions side by side, identifying changes, reasons, and remaining uncertainties.”
 
 ## Entry Format
 
