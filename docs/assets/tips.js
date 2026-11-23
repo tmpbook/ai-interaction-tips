@@ -1,6 +1,16 @@
 (() => {
   const library = document.querySelector(".library");
   const chinese = document.documentElement.lang === "zh-CN";
+  const theme = document.createElement("label");
+  theme.className = "theme-control";
+  const caption = document.createElement("span");
+  caption.textContent = chinese ? "外观" : "Theme";
+  const themeSelect = document.createElement("select");
+  for (const [value, title] of [["system", chinese ? "跟随系统" : "System"], ["light", chinese ? "浅色" : "Light"], ["dark", chinese ? "深色" : "Dark"]]) themeSelect.add(new Option(title, value));
+  themeSelect.value = window.tipsTheme?.get() || "system";
+  themeSelect.addEventListener("change", () => window.tipsTheme?.set(themeSelect.value));
+  theme.append(caption, themeSelect);
+  library?.querySelector(":scope > p")?.append(theme);
   const labels = chinese ? {
     topic: "主题", level: "难度", allTopics: "全部主题", allLevels: "全部难度",
     beginner: "入门", advanced: "进阶", details: "查看用法",
