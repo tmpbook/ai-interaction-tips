@@ -182,3 +182,19 @@ a { color: var(--accent); text-underline-offset: .2em; }
   .tip-filters label { max-width: none; flex-basis: 7rem; min-width: 0; }
   .tip-results { flex-basis: 100%; }
 }
+
+.site-footer {
+  width: min(72rem, 100% - 3rem);
+  margin: 0 auto 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1rem;
+  color: var(--muted);
+  font-size: .875rem;
+}
+.site-footer a { overflow-wrap: anywhere; }
+@media (max-width: 680px) {
+  .site-footer { width: calc(100% - 2rem); }
+}
