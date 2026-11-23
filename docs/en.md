@@ -33,7 +33,23 @@ AI interaction tips, with reusable examples and notes on what worked.
 - Change the setting in the tool and decide what to keep from the results. Test the effect of each setting.
 - **Copyable prompt:** “Design three test tasks with clear acceptance criteria for my usual [task type], so I can compare reasoning settings. Specify what to check for each task and where to record elapsed time and usage.”
 
+### Map a long document before reading selected sections
+
+**Beginner**
+
+- Use this for long reports, proposals, or manuals. State your reading goal, ask the AI to map the document and identify relevant sections, then choose passages to examine.
+- Distinguish the original table of contents from an inferred outline. Request section or paragraph references and flag information absent from the document.
+- **Copyable prompt:** “My goal in reading this document is [goal]. First list its table of contents or structure, marking any outline you inferred, and identify the most relevant sections. Wait for me to choose, then explain those passages with references to their location. Do not fill gaps with unsupported information.”
+
 ## Project Collaboration {#workflow}
+
+### Define the intended outcome before choosing a deliverable
+
+**Advanced**
+
+- Use this when a request names a deliverable, such as a presentation or report, but leaves its purpose unclear. Specify who will use it and what they need to understand or decide, then choose the format.
+- Select methods relevant to the goal, such as data analysis to check trends or interview questions to fill gaps. Examine original material before suggesting missing steps that affect the outcome. Confirm any expanded scope first.
+- **Copyable prompt:** “I need [deliverable] for [audience] to help them [understand or act]. First help me define checkable success criteria, examine the available original material and gaps, then suggest relevant professional methods and any missing steps that affect the outcome. Explain the purpose and cost of each step, and wait for me to confirm the scope before executing.”
 
 ### Agree on a plan, then deliver one feature at a time
 
@@ -49,6 +65,7 @@ AI interaction tips, with reusable examples and notes on what worked.
 **Advanced**
 
 - Use this when extracting decisions and action items from a transcript. Separate confirmed decisions, suggestions under discussion, and open issues.
+- For quick follow-up, put action items in three columns: owner, confirmed action, and timing. Preserve relevant conditions and open issues.
 - List only actions confirmed in the meeting. Mark unconfirmed owners or dates as pending confirmation, and preserve qualifiers such as “aim for” and “expected.”
 - **Copyable prompt:** “Organize the minutes into confirmed decisions, suggestions under discussion, and open issues. List only confirmed action items and mark missing owners or dates as pending confirmation. Check each item against the transcript for suggestions recorded as decisions or target dates recorded as commitments. List follow-up questions separately.”
 
@@ -81,6 +98,8 @@ AI interaction tips, with reusable examples and notes on what worked.
 **Beginner**
 
 - Use this to turn a technical explanation, analysis, or draft into something you can share directly. Lead with what readers need to know, use terminology they already recognize, and prefer active voice. Reorder the material around the reader’s needs, keeping process details where they help readers understand or act.
+- For a weekly update, supply five factual work notes and combine them into three sentences organized around outcomes. Preserve supported results, impact, and unfinished work; do not turn activity into an invented achievement.
+- **Copyable prompt:** “Combine these five work notes into a three-sentence weekly update organized around outcomes. Preserve known results, impact, and unfinished work. State when data or results are missing; do not invent improvements. Notes: [paste notes].”
 - **Copyable prompt:** “Rewrite this for [audience]. Open with the conclusion they need most, use our existing terminology, and prefer active voice. Organize it in the order the reader needs, and keep process details that help them understand or act.”
 
 ### Ask the AI to clarify an underspecified request
@@ -97,6 +116,8 @@ AI interaction tips, with reusable examples and notes on what worked.
 
 - Use this to examine a judgment or proposal. Ask for up to three specific, checkable concerns, choose one to address with your reasoning or a counterexample, and compare the original and revised conclusions.
 - Each concern should connect to your actual words and identify supporting evidence or a condition to test. Verify the grounds for the conclusion and pause the debate when objections are generic or their evidence cannot be checked.
+- For a decision, choose the concern most likely to change it and design a small test you can complete this week. Define the method, observable results, and conditions for changing the plan before deciding from the results.
+- **Copyable prompt:** “My plan is [plan]. Identify up to five of the strongest objections, distinguishing established facts, inferences, and assumptions to test. Do not invent evidence to fill the list. Choose the objection I am most likely to overlook that could change my decision, and design a low-cost test for this week. Specify the steps, observable measures, and results that would warrant changing the plan.”
 - **Copyable prompt:** “Examine my judgment first and identify up to three concerns with specific reasons. Quote the relevant part of my statement and explain the evidence and conditions to test. Say so if you find no concerns. Wait for me to choose one and provide my reasoning, then reassess. Finally, place the original and revised conclusions side by side, identifying changes, reasons, and remaining uncertainties.”
 
 ## Entry Format
