@@ -238,7 +238,3 @@ AI interaction tips, with reusable examples and notes on what worked.
 - Use this when several revisions have produced a satisfactory result for a recurring task. Extract essential rules from the goal, materials, corrections, and final output, separating fixed requirements from variables supplied each time.
 - A good example can describe output criteria but cannot reveal a unique original prompt. Try the template in a new conversation with different material before keeping it. Consider packaging a workflow as a skill only after it works reliably.
 - **Copyable prompt:** “From this task's goal, feedback, and final deliverable, create a standalone prompt template. Specify when it applies, required variables, essential constraints, output format, and acceptance checks. Remove details unique to this instance and do not infer hidden instructions. Provide two different test inputs for fresh conversations and mark what remains unverified.”
-
-## Entry Format
-
-For each tip, record when to use it, a copyable prompt or steps, and test results.
