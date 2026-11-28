@@ -27,6 +27,7 @@ AI interaction tips, with reusable examples and notes on what worked.
 - Add a role, steps, or output format when useful; small tasks do not need every field.
 - Translate words such as “professional” or “concise” into checkable requirements, such as leading with a conclusion and staying within a word limit. Provide negative examples with a desired correction. For exploratory work, constrain the goal and essential boundaries, then refine through feedback instead of fixing every step upfront.
 - Specify what may change, what must stay unchanged, and how to handle missing information. A role can describe tone or perspective, but acceptance still depends on task criteria and evidence.
+- For custom instructions, name the audience and the behavior you want. For example, “Use short sentences in team notices. Ask me if the time or location is missing.” Try it on a familiar notice with a missing detail and check whether the assistant asks before keeping the rule.
 - **Copyable prompt:** “Background: [why this arose]. Goal: [intended outcome]. Constraints: [time, budget, boundaries]. Acceptance criteria: [checkable conditions]. Materials and examples: [content]. Check for missing information that could affect the result, distinguish facts from assumptions, then complete [task] in [format].”
 
 ### Ask the AI to clarify an underspecified request
@@ -75,6 +76,7 @@ AI interaction tips, with reusable examples and notes on what worked.
 - Use this for long reports, proposals, or manuals. State your reading goal, ask the AI to map the document and identify relevant sections, then choose passages to examine.
 - List the sections or pages actually read, unread parts, and uncertain coverage. Seeing the table of contents does not mean the body was read. Report totals only when verifiable, and check coverage of key sections before drawing conclusions.
 - Distinguish the original table of contents from an inferred outline. Request section or paragraph references and flag information absent from the document.
+- For a one-page brief, specify the reader and the decision they face. For an implementation lead, extract next steps, dependencies, and risks from the sections read, with a reference for each item.
 - **Copyable prompt:** “My goal in reading this document is [goal]. First list sections or pages actually read, unread parts, and uncertain coverage. Then list the table of contents or structure, mark any inferred outline, and identify the relevant sections. Answer only from the parts read; seeing the contents does not establish full coverage. Wait for me to choose, then explain those passages with references to their location. Do not fill gaps with unsupported information.”
 
 ### Summarize long conversations and prepare a handoff for the next chat
@@ -86,6 +88,7 @@ AI interaction tips, with reusable examples and notes on what worked.
 - To continue the same task in a new chat, save a local `HANDOFF.md` and include it in the new conversation. Capture the necessary context and output format, the goal, progress, decisions and their rationale, pitfalls, what was verified, open issues, and the order of next steps.
 - For ongoing projects, index the background, current deliverables, and file locations with update dates. Reference only relevant material during handoff. Store reusable preferences separately from temporary status and update stale information.
 - At milestones and before delivery, check requirements against the latest summary and list new assumptions or default decisions. Start a new conversation to separate tasks; saying “clear the context” is not evidence that records were erased.
+- Start a personal knowledge base with an index, a short list of lasting preferences, and notes for one active task. Edit the original preference when it changes. At project close, carry forward only decisions and pitfalls likely to matter again.
 - **Copyable prompt:** “Summarize the current task in HANDOFF.md. Include the goal, output requirements, progress, decisions and why we made them, what was verified, and what remains open. End with next steps in priority order.”
 
 ## Writing & Verification {#output}
@@ -147,6 +150,7 @@ AI interaction tips, with reusable examples and notes on what worked.
 - Use this when drafts should reflect your own writing. Provide representative pieces and before-and-after edits. Ask for observations about wording, structure, and expressions to avoid, each backed by an excerpt, then review and save them.
 - Capture judgment rules separately through questions about real choices. Record trade-offs and evidence requirements without treating one decision as a permanent belief.
 - Save reviewed rules in project instructions where supported, or attach relevant portions to each task. Review and update them; one conversation does not make them permanently active.
+- When editing, ask the AI to compare the draft with your sample, quote up to three stock phrases, and rewrite each one. Use a concrete action, number, or scene supported by your notes. Drop the vague claim if the notes cannot support it.
 - **Copyable prompt:** “From my writing and editing examples, extract expression habits, phrases to avoid, and alternatives, with an excerpt supporting each observation. Mark uncertain observations for confirmation. Then ask one question at a time about my real choices to capture judgment rules and their conditions of use. Wait for my review before saving writing rules and applying them to new drafts. Material: [content].”
 
 ## Tasks & Collaboration {#workflow}
@@ -204,6 +208,14 @@ AI interaction tips, with reusable examples and notes on what worked.
 - Sending a request does not prove success. Local caches, completion files, and the AI's own summary can help track work but cannot independently prove an external action succeeded. Mark insufficiently supported results as attempted or unconfirmed.
 - Explain what tests covered and what they did not. UI messages must match actual capabilities and receipts: saving a draft is not publishing, and success should not appear before confirmation.
 - **Copyable prompt:** “After [task], list actions taken, verified results, and unresolved items against the acceptance criteria. Attach a checkable file location, system receipt, or freshly read state for each, including the object and check time. Explain what the tests establish and what they do not cover. Do not claim completion without independent evidence or treat your own completion marker as proof.”
+
+### Preview and verify changes to a legacy project
+
+**Advanced**
+
+- Use this for scripts that fill gaps in existing data or configuration. Define the permitted changes, behavior to preserve, and rollback procedure. Run in an environment with test data and no access to production resources.
+- Include both a missing value and an existing value in the test copy. Preview the changes, run the script, and compare actual changes with the preview. Run it again on the same copy and expect zero additional changes. Check existing values and out-of-scope records as well.
+- **Copyable prompt:** “Fill [gap] within [scope] while preserving [behavior]. First confirm the test environment is isolated from production and record the initial state and rollback procedure. Preview the expected changes, apply them to the test copy, compare actual changes with the preview, then run again. Report the second run's change count, any out-of-scope differences, and anything still unverified.”
 
 ## Evaluation & Reuse {#evaluation}
 
